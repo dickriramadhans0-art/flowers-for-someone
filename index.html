@@ -11,6 +11,18 @@
 </head>
 
 <body>
+  <audio id="bgm" loop>
+    <source src="https://files.catbox.moe/kp2j8b.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const audio = document.getElementById('bgm');
+    audio.play().catch(() => {
+        document.addEventListener('click', () => {
+            audio.play();
+        }, { once: true });
+    });
+</script>
   <!-- Background -->
   <div class="night"></div>
 
